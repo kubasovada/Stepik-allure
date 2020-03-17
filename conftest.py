@@ -2,7 +2,7 @@ from selenium import webdriver
 import pytest
 
 def pytest_addoption(parser):
-    parser.addoption('--browser', action='store', default=None, help='Choose browser')
+    parser.addoption('--browser', action='store', default='Chrome', help='Choose browser')
 
 @pytest.fixture(scope="function")
 def browser(request):
